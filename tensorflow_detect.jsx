@@ -39,7 +39,6 @@ export default function CameraScreen () {
   const uploadImage = async () => {
     if (!imageUri) return;
 
-    // Create FormData object to send the image as a file
     const formData = new FormData();
     formData.append('image', {
       uri: imageUri,
@@ -48,14 +47,11 @@ export default function CameraScreen () {
     });
 
     try {
-      // Replace 'your_server_endpoint' with your actual server endpoint
-      const response = await fetch('your_server_endpoint', {
+      const response = await fetch('http://localhost:8080', {
         method: 'POST',
         body: formData,
       });
 
-      // Handle the server response here
-      // Example: const data = await response.json();
     } catch (error) {
       console.error('Error uploading image:', error);
     }

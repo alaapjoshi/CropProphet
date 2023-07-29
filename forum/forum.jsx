@@ -12,7 +12,6 @@ const firebaseConfig = {
   import { createStackNavigator } from '@react-navigation/stack';
   
   
-  // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const db = getFirestore();
   
@@ -43,12 +42,10 @@ const firebaseConfig = {
     };
   
     const handlePostPress = (post) => {
-      // Navigate to the full post page passing the post data
       navigation.navigate('FullPostScreen', { post });
     };
   
     const handleAddPost = () => {
-      // Navigate to the "Create New Post" screen
       navigation.navigate('CreatePostScreen');
     };
   
@@ -60,7 +57,6 @@ const firebaseConfig = {
           keyExtractor={(item) => item.id}
           contentContainerStyle={styles.listContainer}
         />
-        {/* Upload Post Button */}
         <TouchableOpacity style={styles.addButton} onPress={handleAddPost}>
           <Text style={styles.addButtonText}>Upload Post</Text>
         </TouchableOpacity>

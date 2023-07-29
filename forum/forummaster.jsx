@@ -2,10 +2,13 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import CreatePostScreen from './CreatePostScreen';
+import CreatePostScreen from '../CreatePostScreen';
 
 import FullPostScreen from './FullPostScreen';
+
 import ForumScreen from './forum';
+
+
 const Stack = createStackNavigator();
 
 const Forumaster = () => {
